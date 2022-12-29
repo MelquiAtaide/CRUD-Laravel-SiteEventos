@@ -28,7 +28,7 @@
                         <a href="/" class="nav-link">Eventos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/" class="nav-link">Criar Eventos</a>
+                        <a href="{{route('create')}}" class="nav-link">Criar Eventos</a>
                     </li>
                     <li class="nav-item">
                         <a href="/" class="nav-link">Entrar</a>
@@ -44,6 +44,11 @@
     <footer>
         <p>MA Eventos &copy; 2022</p>
     </footer>
+
+    {{-- scripts dp bootstrap --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    {{-- scripts do ionIcons --}}
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

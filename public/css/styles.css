@@ -5,3 +5,9 @@ li {
 #navbar img {
     width: 80px;
 }
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+}
+

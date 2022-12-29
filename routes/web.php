@@ -1,6 +1,9 @@
 <?php
 
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\EventoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+
+Route::get('/', [EventoController::class, 'index']);
+Route::get('/evento/create', [EventoController::class, 'create'])->name('create');
+
