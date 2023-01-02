@@ -28,6 +28,7 @@ class StoreUserRequest extends FormRequest
             'cidade' => 'required',
             'privado' => 'required',
             'descricao' => 'required',
+            'imagem' => 'required|image',
 
         ];
     }

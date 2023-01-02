@@ -21,9 +21,14 @@ class EventoController extends Controller
 
     public function store (StoreUserRequest $request){
 
-        $evento = new Evento;
+        $eventos = new Evento;
 
-        // $evento::create($request->all());
+        $eventos->titulo = $request->titulo;
+        $eventos->cidade = $request->cidade;
+        $eventos->privado = $request->privado;
+        $eventos->descricao = $request->descricao;
+
+        //$evento::create($request->all());
 
         if($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
 
@@ -35,12 +40,18 @@ class EventoController extends Controller
 
             $requestImagem->move(public_path('img/eventos'), $imagemName);
 
-            $evento->imagem = $imagemName;
-
+            $eventos->imagem = $imagemName;
         }
 
-        $evento::create($request->all());
+        $eventos->save();
 
         return redirect('/')->with('msg', 'Evento Criado com Sucesso!');
+    }
+
+    public function show ($id){
+
+        $eventos = Evento::findOrFail($id);
+
+        return view('eventos.show', ['eventos' => $eventos]);
     }
 }
