@@ -16,4 +16,10 @@ class Evento extends Model
         'descricao',
         'imagem',
     ];
+
+    protected $casts = [
+        'itens' => 'array'
+    ];
+
+    protected $dates = ['data'];
 }

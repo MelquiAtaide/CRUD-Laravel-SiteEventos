@@ -24,9 +24,11 @@ class EventoController extends Controller
         $eventos = new Evento;
 
         $eventos->titulo = $request->titulo;
+        $eventos->data = $request->data;
         $eventos->cidade = $request->cidade;
         $eventos->privado = $request->privado;
         $eventos->descricao = $request->descricao;
+        $eventos->itens = $request->itens;
 
         //$evento::create($request->all());
 

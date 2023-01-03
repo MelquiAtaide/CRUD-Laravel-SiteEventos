@@ -22,8 +22,12 @@
             <input type="file" class="form-control-file" id="imagem" name="imagem">
         </div>
         <div class="form-group">
-            <label for="titulo">Título:</label>
+            <label for="titulo">Evento:</label>
             <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título do evento">
+        </div>
+        <div class="form-group">
+            <label for="titulo">Data do evento:</label>
+            <input type="date" class="form-control" id="data" name="data" placeholder="Título do evento">
         </div>
         <div class="form-group">
             <label for="titulo">Cidade:</label>
@@ -39,6 +43,24 @@
         <div class="form-group">
             <label for="titulo">Descrição:</label>
             <input type="text" class="form-control" id="descricao" name="descricao" placeholder="O que vai acontecer no evento?">
+        </div>
+        <div class="form-group">
+            <label for="titulo">Adicione itens de infraestrutura:</label>
+            <div class="form-group">
+                <input type="checkbox" name="itens[]" value="Cadeiras"> Cadeiras
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="itens[]" value="Palco"> Palco
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="itens[]" value="Open Bar"> Open Bar
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="itens[]" value="Open Food"> Open Food
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="itens[]" value="Brindes"> Brindes
+            </div>
         </div>
         <input type="submit" class="btn btn-primary" id="btnform" value="Criar Evento">
     </form>

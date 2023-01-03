@@ -13,13 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('eventos', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string("titulo");
-            $table->text("descricao");
-            $table->string("cidade");
-            $table->boolean("privado");
-            $table->timestamps();
+        Schema::table('eventos', function (Blueprint $table) {
+            $table->dateTime('data');
         });
     }
 
@@ -30,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('eventos');
+        Schema::table('eventos', function (Blueprint $table) {
+            $table->dropColumn('data');
+        });
     }
 };
