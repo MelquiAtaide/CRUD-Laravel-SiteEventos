@@ -39,5 +39,7 @@
 
 
 {{-- https://www.youtube.com/watch?v=_sayRBbEHN8&list=PLnDvRpP8BnewYKI1n2chQrrR4EYiJKbUG&index=8 --}}
+{{-- https://pt.stackoverflow.com/questions/136163/deploy-de-projeto-laravel-pelo-git --}}
+{{-- https://www.youtube.com/watch?v=e4x9WAr4yZY --}}
 
 @endsection
