@@ -197,6 +197,80 @@ header {
     display: flex;
 }
 
+/* Página de Login */
+
+.exit-container {
+    display: flex;
+    justify-content: end;
+    margin-right: 50px;
+    width: 92%;
+    height: 30px;
+    align-items: center;
+}
+
+
+.exit-container a {
+    font-size: 14px;
+    color: #757575;
+}
+
+.exit-container a:hover {
+    color: #f2a340;
+}
+
+.login-container {
+    width: 100vw;
+    height: 80vh;
+    background: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container form {
+    width: 30%;
+    height: 40%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #dee3e4;
+    border: 1px solid #c5c3c3;
+    border-radius: 10px;
+}
+
+#btn-login {
+    margin-top: 18px;
+    width: 100%
+
+}
+
+/* Página de cadastro */
+
+.register-conteiner {
+    width: 100vw;
+    height: 80vh;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-conteiner form {
+    width: 30%;
+    height: 75%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #dee3e4;
+    border: 1px solid #c5c3c3;
+    border-radius: 10px;
+}
+
+#btn-register {
+    margin-top: 18px;
+    width: 100%
+}
+
 /* Footer */
 
 footer {
