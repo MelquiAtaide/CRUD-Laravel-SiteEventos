@@ -17,15 +17,38 @@ header {
     padding: 0;
 }
 
-.btn-primary {
+/* .btn-primary {
     background-color: #f2a340;
     border: 2px solid #c28008;
-}
+} */
 
 .btn-primary:hover {
-    background-color: #c28008;
+    background-color: #f2a340;
     border-color: #c28008;
 }
+
+.fancy-btn {
+    background-color: #f2a340;
+    color: rgb(255, 255, 255);
+    border-radius: 10em;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 1em 2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #c28008;
+    box-shadow: 0 0 0 0 #c28008;
+  }
+
+.fancy-btn:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 #c28008;
+  };
+
+.fancy-btn:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 #c28008;
+  };
 
 .msg {
     background-color: #d4edda;
@@ -209,28 +232,60 @@ header {
 }
 
 
-.exit-container a {
+/* .exit-container a {
     font-size: 14px;
     color: #757575;
 }
 
 .exit-container a:hover {
     color: #f2a340;
-}
+} */
+
+button {
+    display: flex;
+    height: 3em;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee4b;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+   }
+
+   button > svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+   }
+
+   button:hover > svg {
+    font-size: 1.2em;
+    transform: translateX(-5px);
+   }
+
+   button:hover {
+    box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+    transform: translateY(-2px);
+   }
 
 .login-container {
     width: 100vw;
     height: 80vh;
     background: #ffffff;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .login-container form {
     width: 30%;
-    height: 40%;
+    height: 45%;
     margin: 0 auto;
     padding: 10px;
     background-color: #dee3e4;
@@ -240,8 +295,7 @@ header {
 
 #btn-login {
     margin-top: 18px;
-    width: 100%
-
+    width: 100%;
 }
 
 /* Página de cadastro */

@@ -62,7 +62,7 @@
                 <input type="checkbox" name="itens[]" value="Brindes"> Brindes
             </div>
         </div>
-        <input type="submit" class="btn btn-primary" id="btnform" value="Criar Evento">
+        <input type="submit" class="btn btn-primary fancy-btn" id="btnform" value="Criar Evento">
     </form>
 </div>
 

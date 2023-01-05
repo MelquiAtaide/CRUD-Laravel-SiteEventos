@@ -4,7 +4,7 @@ use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\EventoController;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +23,6 @@ Route::get('/evento/create', [EventoController::class, 'create'])->name('create'
 Route::get('/evento/{id}', [EventoController::class, 'show'])->name('show');
 Route::post('/evento', [EventoController::class, 'store'])->name('store');
 
-Route::get('/login', [LoginController::class, 'login'])->name('login');
-Route::post('/login', [LoginController::class, 'logout'])->name('logout');
-Route::get('/register', [LoginController::class, 'register'])->name('register');
+Route::get('/login', [UserController::class, 'login'])->name('login');
+Route::post('/auth', [UserController::class, 'auth'])->name('auth');
+Route::get('/register', [UserController::class, 'register'])->name('register');
