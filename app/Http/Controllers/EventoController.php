@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Evento;
-use App\Http\Requests\StoreUserRequest;
+use App\Http\Requests\StoreEventRequest;
 
 class EventoController extends Controller
 {
@@ -27,9 +27,9 @@ class EventoController extends Controller
         return view('eventos.create');
     }
 
-    public function store (StoreUserRequest $request){
+    public function store (StoreEventRequest $request, Evento $eventos){
 
-        $eventos = new Evento;
+        // $eventos = new Evento;
 
         $eventos->titulo = $request->titulo;
         $eventos->data = $request->data;

@@ -23,28 +23,30 @@
     </div>
     <div class="register-conteiner">
         <h3>Cadastro</h3>
-        <form action="" method="POST">
+        <form action="{{route('user')}}" method="POST">
             @csrf
+            <div class="form-group">
+                <label for="name">Nome Completo:</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome">
+            </div>
             <div class="form-group">
                 <label for="email">E-mail:</label>
                 <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu E-mail">
             </div>
-            <div class="form-group">
+            {{-- <div class="form-group">
                 <label for="email">Confirme seu E-mail:</label>
                 <input type="email" class="form-control" id="email" name="email">
-            </div>
+            </div> --}}
             <div class="form-group">
-                <label for="senha">Senha:</label>
-                <input type="password" class="form-control" id="senha" name="senha" placeholder="Crie uma senha">
+                <label for="password">Senha:</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Crie uma senha">
             </div>
-            <div class="form-group">
+            <input type="radio" name="client" value="Cliente" checked>Cliente<br>
+            <input type="radio" name="client" value="Administrador">Administrador<br>
+            {{-- <div class="form-group">
                 <label for="senha">Confirme sua Senha:</label>
                 <input type="password" class="form-control" id="senha" name="senha">
-            </div>
-            <div class="form-group">
-                <label for="name">Nome de usuário:</label>
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome de usuário">
-            </div>
+            </div> --}}
             <input type="submit" class="btn btn-primary" id="btn-register" value="Enviar">
         </form>
     </div>

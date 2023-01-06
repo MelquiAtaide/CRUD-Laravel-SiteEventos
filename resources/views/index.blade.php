@@ -42,5 +42,6 @@
 {{-- https://pt.stackoverflow.com/questions/136163/deploy-de-projeto-laravel-pelo-git --}}
 {{-- https://www.youtube.com/watch?v=e4x9WAr4yZY --}}
 {{-- https://www.youtube.com/watch?v=OsgsapoaIHE --}}
+{{-- https://www.youtube.com/watch?v=Br0tEOkz6kw --}}
 
 @endsection

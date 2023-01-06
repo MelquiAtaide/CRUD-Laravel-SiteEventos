@@ -24,22 +24,9 @@ class StoreUserRequest extends FormRequest
     public function rules()
     {
         return [
-            'titulo' => 'required',
-            'data' => 'required|date',
-            'cidade' => 'required',
-            'privado' => 'required',
-            'descricao' => 'required',
-            'imagem' => 'required|image',
-
-        ];
-    }
-
-    public function messages()
-    {
-        return [
-            'titulo.required' => 'O campo título é obrigatório.',
-            'cidade.required' => 'O campo cidade é obrigatório.',
-            'descricao.required' => 'O campo descricao é obrigatório.',
+            'name' => 'required|string',
+            'email' => 'required|email',
+            'password' => 'required|',
         ];
     }
 }

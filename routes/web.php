@@ -23,6 +23,8 @@ Route::get('/evento/create', [EventoController::class, 'create'])->name('create'
 Route::get('/evento/{id}', [EventoController::class, 'show'])->name('show');
 Route::post('/evento', [EventoController::class, 'store'])->name('store');
 
+
 Route::get('/login', [UserController::class, 'login'])->name('login');
 Route::post('/auth', [UserController::class, 'auth'])->name('auth');
 Route::get('/register', [UserController::class, 'register'])->name('register');
+Route::post('/user', [UserController::class, 'user'])->name('user');

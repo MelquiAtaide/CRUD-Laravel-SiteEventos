@@ -22,6 +22,15 @@
           </button>
     </div>
     <div class="login-container">
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <form action="{{route('auth')}}" method="POST">
             @csrf
             <h3>Login</h3>
@@ -31,7 +40,7 @@
             </div>
             <div class="form-group">
                 <label for="senha">Senha:</label>
-                <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha cadastrada">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Digite sua senha cadastrada">
             </div>
             <div class="container-btn-form">
                 <input type="submit" class="btn btn-primary" id="btn-login" value="Enviar">
