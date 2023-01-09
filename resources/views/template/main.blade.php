@@ -32,10 +32,10 @@
                     </li>
                     @auth
                     <li class="nav-item">
-                        <a href="#" class="nav-link">meus eventos</a>
+                        <a href="{{route('dashboard')}}" class="nav-link">Meus Eventos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{route('logout')}}" class="nav-link">Exit</a>
+                        <a href="{{route('logout')}}" class="nav-link">Sair</a>
                     </li>
                     @endauth
                     @guest
@@ -44,7 +44,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="{{route('register')}}" class="nav-link">Cadastrar</a>
-                    </li>   
+                    </li>
                     @endguest
                 </ul>
             </div>

@@ -15,6 +15,8 @@ class Evento extends Model
         'privado',
         'descricao',
         'imagem',
+        'data',
+        'itens'
     ];
 
     protected $casts = [
@@ -23,7 +25,9 @@ class Evento extends Model
 
     protected $dates = ['data'];
 
+    protected $guarded = [];
+
     public function user(){
-        return $this->belongsTo('App\Models\User'); 
+        return $this->belongsTo('App\Models\User');
     }
 }

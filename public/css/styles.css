@@ -325,6 +325,28 @@ button {
     width: 100%
 }
 
+ /* Página de Dashboard */
+
+ .dashboard-title-container {
+    margin-bottom: 30px;
+    margin-top: 30px;
+ }
+
+ .dashboard-events-container th {
+    width: 25%;
+ }
+
+ .dashboard-events-container form {
+    display: inline-block;
+ }
+
+ /* Página edit */
+
+ .img-preview {
+    width: 100px;
+    margin-top: 20px;
+ }
+
 /* Footer */
 
 footer {
