@@ -19,7 +19,12 @@ return new class extends Migration
             $table->text("descricao");
             $table->string("cidade");
             $table->boolean("privado");
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
+            $table->string('imagem');
+            $table->json('itens');
+            $table->dateTime('data');
         });
     }
 

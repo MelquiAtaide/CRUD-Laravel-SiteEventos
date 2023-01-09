@@ -30,12 +30,22 @@
                     <li class="nav-item">
                         <a href="{{route('create')}}" class="nav-link">Criar Eventos</a>
                     </li>
+                    @auth
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">meus eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{route('logout')}}" class="nav-link">Exit</a>
+                    </li>
+                    @endauth
+                    @guest
                     <li class="nav-item">
                         <a href="{{route('login')}}" class="nav-link">Entrar</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{route('register')}}" class="nav-link">Cadastrar</a>
-                    </li>
+                    </li>   
+                    @endguest
                 </ul>
             </div>
         </nav>

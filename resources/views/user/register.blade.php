@@ -41,8 +41,6 @@
                 <label for="password">Senha:</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="Crie uma senha">
             </div>
-            <input type="radio" name="client" value="Cliente" checked>Cliente<br>
-            <input type="radio" name="client" value="Administrador">Administrador<br>
             {{-- <div class="form-group">
                 <label for="senha">Confirme sua Senha:</label>
                 <input type="password" class="form-control" id="senha" name="senha">

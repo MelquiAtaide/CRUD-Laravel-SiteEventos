@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Evento;
 use App\Http\Requests\StoreEventRequest;
+use App\Models\User;
 
 class EventoController extends Controller
 {
@@ -53,6 +54,9 @@ class EventoController extends Controller
             $eventos->imagem = $imagemName;
         }
 
+        $user = auth()->user();
+        $eventos->user_id = $user->id;
+
         $eventos->save();
 
         return redirect('/')->with('msg', 'Evento Criado com Sucesso!');
@@ -62,6 +66,8 @@ class EventoController extends Controller
 
         $eventos = Evento::findOrFail($id);
 
-        return view('eventos.show', ['eventos' => $eventos]);
+        $eventOwner = User::where('id', $eventos->user_id)->first()->toArray();
+
+        return view('eventos.show', ['eventos' => $eventos, 'eventOwner' => $eventOwner]);
     }
 }
