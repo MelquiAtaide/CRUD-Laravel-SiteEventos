@@ -13,8 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('eventos', function (Blueprint $table) {
-            $table->string('imagem');
+        Schema::create('evento_user', function (Blueprint $table) {
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('evento_id')->unsigned();
+            $table->foreign('evento_id')->references('id')->on('eventos');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('eventos', function (Blueprint $table) {
-            $table->dropColumn('imagem');
-        });
+        Schema::dropIfExists('evento_user');
     }
 };

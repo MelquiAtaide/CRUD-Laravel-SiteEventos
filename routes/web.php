@@ -22,7 +22,7 @@ Route::get('/', [EventoController::class, 'index'])->name('index');
 Route::get('/evento/create', [EventoController::class, 'create'])->name('create')->middleware('auth');
 Route::get('/evento/{id}', [EventoController::class, 'show'])->name('show');
 Route::post('/evento', [EventoController::class, 'store'])->name('store');
-Route::delete('evento/{id}', [EventoController::class, 'destroy'])->middleware('auth');
+Route::delete('/evento/{id}', [EventoController::class, 'destroy'])->middleware('auth');
 Route::get('/evento/edit/{id}', [EventoController::class, 'edit'])->middleware('auth');
 Route::put('/evento/update/{id}', [EventoController::class, 'update'])->middleware('auth');
 
@@ -34,3 +34,4 @@ Route::post('/user', [UserController::class, 'user'])->name('user');
 
 Route::get('/logout', [UserController::class, 'logout'])->name('logout')->middleware('auth');
 Route::get('/dashboard', [EventoController::class, 'dashboard'])->name('dashboard')->middleware('auth');
+Route::post('/evento/join/{id}', [EventoController::class, 'joinEvent'])->middleware('auth');

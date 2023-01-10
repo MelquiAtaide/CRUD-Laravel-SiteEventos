@@ -9,6 +9,8 @@ class Evento extends Model
 {
     use HasFactory;
 
+    //protected $table = 'eventos';
+
     protected $fillable = [
         'titulo',
         'cidade',
@@ -29,5 +31,9 @@ class Evento extends Model
 
     public function user(){
         return $this->belongsTo('App\Models\User');
+    }
+
+    public function users() {
+        return $this->belongsToMany('App\Models\User');
     }
 }
