@@ -35,3 +35,4 @@ Route::post('/user', [UserController::class, 'user'])->name('user');
 Route::get('/logout', [UserController::class, 'logout'])->name('logout')->middleware('auth');
 Route::get('/dashboard', [EventoController::class, 'dashboard'])->name('dashboard')->middleware('auth');
 Route::post('/evento/join/{id}', [EventoController::class, 'joinEvent'])->middleware('auth');
+Route::delete('/evento/leave/{id}', [EventoController::class, 'leaveEvent'])->middleware('auth');

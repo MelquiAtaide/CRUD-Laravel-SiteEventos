@@ -14,15 +14,19 @@
             <p class="event-city"><ion-icon name="location-outline"></ion-icon>{{ $eventos->cidade }}</p>
             <p class="events-participants"><ion-icon name="people-outline"></ion-icon>{{ count($eventos->users) }} participantes</p>
             <p class="event-owner"><ion-icon name="star-outline"></ion-icon>{{ $eventOwner['name'] }}</p>
-            <form action="/evento/join/{{ $eventos->id }}" method="POST">
-                @csrf
-                <a href="/evento/join/{{ $eventos->id }}"
-                    class="btn btn-primary fancy-btn" id="event-submit"
-                    onclick="event.preventDefault();
-                    this.closest('form').submit();">
-                    Confirmar Presença
-                </a>
-            </form>
+            @if (!$hasUserJoined)
+                <form action="/evento/join/{{ $eventos->id }}" method="POST">
+                    @csrf
+                    <a href="/evento/join/{{ $eventos->id }}"
+                        class="btn btn-primary fancy-btn" id="event-submit"
+                        onclick="event.preventDefault();
+                        this.closest('form').submit();">
+                        Confirmar Presença
+                    </a>
+                </form>
+            @else
+                <p class="already-joined-msg">Você já está participando desde evento</p>
+            @endif
             <h3>O evento conta com:</h3>
             <ul id="itens-list">
                 @foreach ($eventos->itens as $item)
