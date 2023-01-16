@@ -43,7 +43,7 @@
                 <input type="password" class="form-control" id="password" name="password" placeholder="Digite sua senha cadastrada">
             </div>
             <div class="container-btn-form">
-                <input type="submit" class="btn btn-primary" id="btn-login" value="Enviar">
+                <input type="submit" class="btn-login" id="btn-login" value="Enviar">
             </div>
         </form>
     </div>

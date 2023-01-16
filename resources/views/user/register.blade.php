@@ -22,9 +22,12 @@
           </button>
     </div>
     <div class="register-conteiner">
-        <h3>Cadastro</h3>
+
         <form action="{{route('user')}}" method="POST">
             @csrf
+            <div class="titulo-register">
+                <h3>Cadastro</h3>
+            </div>
             <div class="form-group">
                 <label for="name">Nome Completo:</label>
                 <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome">
@@ -45,7 +48,7 @@
                 <label for="senha">Confirme sua Senha:</label>
                 <input type="password" class="form-control" id="senha" name="senha">
             </div> --}}
-            <input type="submit" class="btn btn-primary" id="btn-register" value="Enviar">
+            <input type="submit" class="btn-register" id="btn-register" value="Enviar">
         </form>
     </div>
     <footer>

@@ -7,6 +7,7 @@ use App\Models\Evento;
 use App\Http\Requests\StoreEventRequest;
 use App\Http\Requests\StoreUpdateRequest;
 use App\Models\User;
+use Illuminate\Support\Facades\Http;
 
 class EventoController extends Controller
 {
@@ -160,4 +161,15 @@ class EventoController extends Controller
 
         return redirect('dashboard')->with('msg', 'Você saiu com sucesso do evento: '. $eventos->titulo);
     }
+
+    // public function api () {
+
+    //     $father = Http::get('https://jsonplaceholder.typicode.com/todos/1');
+
+    //     $apiArray = $father->json();
+
+    //     dd($apiArray);
+
+    //     // return view('eventos.dashboard', ['apiArray' => $apiArray]);
+    // }
 }
